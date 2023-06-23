@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $startDate = $_POST["start"]; 
     $endDate = $_POST["end"];
     
-    if (strtotime($startDate) < $today or  strtotime($startDate) > strtotime($endDate)) {
+    if (strtotime($startDate) <= $today or  strtotime($startDate) > strtotime($endDate)) {
         $rooms_available = [];
     } else {
         $result_bookings = $database->executeQuery('SELECT * FROM bookings ORDER BY `order_date` ASC');

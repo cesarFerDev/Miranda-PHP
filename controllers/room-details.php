@@ -13,10 +13,10 @@ $blade = new BladeOne($views, $cache, BladeOne::MODE_AUTO);
 
 $id = $_GET['id'];
 $database = new Database();
-$result = $database->executeQuery("SELECT * FROM rooms WHERE `id` = '$id'");
+$result = $database->executeQuery("SELECT * FROM rooms WHERE id = '$id'");
 $room = $result->fetch_array();
 $room['photos'] = json_decode($room['photos']);
-$roomObject = new Room($room);
+$roomDetailObject = new Room($room);
 
 $type = $room["type"];
 $result = $database->executeQuery("SELECT * FROM rooms WHERE `type` = '$type' AND id != '$id' ORDER BY `number` ASC LIMIT 2");
@@ -58,4 +58,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-echo $blade->run("room-details", ["room" => $roomObject, "rooms_related" => $rooms_related]);
+echo $blade->run("room-details", ["room" => $roomDetailObject, "rooms_related" => $rooms_related]);
