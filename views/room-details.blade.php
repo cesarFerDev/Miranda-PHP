@@ -400,7 +400,7 @@ Room Details
             Swal.fire({
                 icon: 'success',
                 title: 'Thank you!',
-                text: "You have been booked this room, have a great stay!",
+                text: "You have booked this room, have a great stay!",
                 confirmButtonColor: '#BDAC8D'
                 })
         </script>
