@@ -10,6 +10,8 @@ $cache = __DIR__ . '/../cache';
 
 $blade = new BladeOne($views, $cache, BladeOne::MODE_AUTO);
 
+$error = "";
+
 $database = new Database();
 $result = $database->executeQuery('SELECT * FROM rooms ORDER BY `number` ASC');
 
@@ -28,6 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     if (strtotime($startDate) <= $today or  strtotime($startDate) > strtotime($endDate)) {
         $rooms_available = [];
+        $error = "Invalid Date Input";
     } else {
         $result_bookings = $database->executeQuery('SELECT * FROM bookings ORDER BY `order_date` ASC');
         $bookings = [];
@@ -41,8 +44,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $rooms_available = Room::availableRooms($rooms, $startDate, $endDate);
     }
 
-    echo $blade->run("rooms", ["rooms" => $rooms_available]);
+    echo $blade->run("rooms", ["rooms" => $rooms_available, "error" => $error]);
 
 } else  {
-    echo $blade->run("rooms", ["rooms" => $rooms]);
+    if ($rooms == []) {
+        $error = "There was a problem loading the rooms";
+    }
+    echo $blade->run("rooms", ["rooms" => $rooms, "error" => $error]);
 }   

@@ -90,6 +90,26 @@ Contact
             
         </form>
     </section>
+    @if ($error != "")
+        <script>
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: "{{$error}}",
+                confirmButtonColor: '#BDAC8D'
+                })
+        </script>
+    @endif
+    @if ($posted == true)
+        <script>
+            Swal.fire({
+                icon: 'success',
+                title: 'Thank you for your request!',
+                text: "We have received it correctly. Someone from our Team will get back to you very soon",
+                confirmButtonColor: '#BDAC8D'
+                })
+        </script>
+    @endif
 @endsection
 @section('scripts')
     <script src="../Scripts/burgerMenu.js"></script>

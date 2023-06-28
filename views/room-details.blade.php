@@ -385,9 +385,29 @@ Room Details
         </div>
       </div>
     </section>
+    @if ($error != "")
+        <script>
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: "{{$error}}",
+                confirmButtonColor: '#BDAC8D'
+                })
+        </script>
+    @endif
+    @if ($posted == true)
+        <script>
+            Swal.fire({
+                icon: 'success',
+                title: 'Thank you!',
+                text: "You have been booked this room, have a great stay!",
+                confirmButtonColor: '#BDAC8D'
+                })
+        </script>
+    @endif
 @endsection
 @section('scripts')
-<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="../Scripts/sliders.js"></script>
     <script src="../Scripts/burgerMenu.js"></script>
 @endsection

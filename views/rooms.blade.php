@@ -71,6 +71,16 @@ Rooms
             </div>
         </div>
     </section>
+    @if ($error != "")
+        <script>
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: "{{$error}}",
+                confirmButtonColor: '#BDAC8D'
+                })
+        </script>
+    @endif
 @endsection
 @section('scripts')
     <script src="../Scripts/burgerMenu.js"></script>
