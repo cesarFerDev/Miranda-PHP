@@ -22,7 +22,7 @@ Home
     </section>
 
     <section class="section booking">
-        <form method="POST" action="rooms.php" class="booking__form__container">
+        <form method="POST" action="/rooms" class="booking__form__container">
         <div class="booking__inputs__container">
             <div class="date__container">
             <label class="booking__title__text" for="start">Arrival Date</label>
@@ -139,7 +139,7 @@ Home
             @foreach($rooms as $index => $room)
                 <div class="swiper-slide home__room__card">
                 <div class="room__card__img__container">
-                    <a href = 'room-details.php?id={{$room->id}}'><img
+                    <a href = '/room/{{$room->id}}'><img
                     class="room__card__img"
                     src='{{$room->photos[0]}}'
                     alt="Room"

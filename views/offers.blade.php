@@ -8,7 +8,7 @@ Offers
         <h1 class="section__title__text sub-header__title text--white">Our Offers</h1>
         <div class="return__home__container">
             <div class="return__home__buttons">
-              <a href="./index.php"><h4 class="return__home__button"><span class="return__button__text text--dark">Home</span></h4></a>
+              <a href="/home"><h4 class="return__home__button"><span class="return__button__text text--dark">Home</span></h4></a>
                 <h4><strong>|</strong></h4>
                 <h4 class="return__home__button"><span class="return__button__text text--golden">Offers</span></h4>
             </div>
@@ -84,7 +84,7 @@ Offers
                             </div>
                         </div>
                     </div>
-                    <a href = 'room-details.php?id={{$room->id}}'>
+                    <a href = 'room/{{$room->id}}'>
                       <button class="button button--golden"><span class="button__text">BOOK NOW</span></button>
                     </a>
                 </div>
@@ -103,7 +103,7 @@ Offers
             @foreach($rooms_popular as $index => $room)
             <div class="swiper-slide room__card">
               <div class="room__card__img__container">
-                <a href = 'room-details.php?id={{$room->id}}'><img
+                <a href = 'room/{{$room->id}}'><img
                   class="room__card__img"
                   src='{{$room->photos[0]}}'
                   alt="Room"
@@ -181,7 +181,7 @@ Offers
             @foreach($rooms_popular as $index => $room)
               <div class="room__card">
                 <div class="room__card__img__container room__card__img__container__petit">
-                <a href = 'room-details.php?id={{$room->id}}'><img
+                <a href = 'room/{{$room->id}}'><img
                     class="room__card__img"
                     src='{{$room->photos[0]}}'
                     alt="Room"

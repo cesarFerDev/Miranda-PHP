@@ -31,10 +31,10 @@
             
             </div>
             <ul class="header__menu__closed">
-                <a href="./about.php"><li class="menu__item">About Us</li></a>
-                <a href="./rooms.php"><li class="menu__item">Rooms</li></a>
-                <a href="./offers.php"><li class="menu__item">Offers</li></a>
-                <a href="./contact.php"><li class="menu__item">Contact</li></a>
+                <a href="/about"><li class="menu__item">About Us</li></a>
+                <a href="/rooms"><li class="menu__item">Rooms</li></a>
+                <a href="/offers"><li class="menu__item">Offers</li></a>
+                <a href="/contact"><li class="menu__item">Contact</li></a>
             </ul>
             </div>
             

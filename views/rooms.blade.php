@@ -8,7 +8,7 @@ Rooms
         <h1 class="section__title__text sub-header__title text--white">Ultimate Room</h1>
         <div class="return__home__container">
             <div class="return__home__buttons">
-                <a href="./index.php"><h4 class="return__home__button"><span class="return__button__text text--dark">Home</span></h4></a>
+                <a href="/home"><h4 class="return__home__button"><span class="return__button__text text--dark">Home</span></h4></a>
                 <h4><strong>|</strong></h4>
                 <h4 class="return__home__button"><span class="return__button__text text--golden">Rooms</span></h4>
             </div>
@@ -21,7 +21,7 @@ Rooms
             @foreach($rooms as $index => $room)
                 <div class="room__card">
                     <div class="room__card__img__container room__card__img__container__petit">
-                        <a href = 'room-details.php?id={{$room->id}}'>
+                        <a href = '/room/{{$room->id}}'>
                             <img class="room__card__img" src='{{$room->photos[0]}}'>
                         </a>
                         <div class="rooms__icons">

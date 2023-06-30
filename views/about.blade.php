@@ -8,7 +8,7 @@ About Us
         <h1 class="section__title__text sub-header__title text--white">About Us</h1>
         <div class="return__home__container">
             <div class="return__home__buttons">
-                <a href="./index.php"><h4 class="return__home__button"><span class="return__button__text text--dark">Home</span></h4></a>
+                <a href="/home"><h4 class="return__home__button"><span class="return__button__text text--dark">Home</span></h4></a>
                 <h4><strong>|</strong></h4>
                 <h4 class="return__home__button"><span class="return__button__text text--golden">About</span></h4>
             </div>

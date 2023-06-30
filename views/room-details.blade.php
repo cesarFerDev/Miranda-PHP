@@ -14,7 +14,7 @@ Room Details
       </h1>
       <div class="return__home__container">
         <div class="return__home__buttons">
-          <a href="./index.php"><h4 class="return__home__button"><span class="return__button__text text--dark">Home</span></h4></a>
+          <a href="/home"><h4 class="return__home__button"><span class="return__button__text text--dark">Home</span></h4></a>
             <h4><strong>|</strong></h4>
             <h4 class="return__home__button"><span class="return__button__text text--golden">Room Details</span></h4>
         </div>
@@ -49,7 +49,7 @@ Room Details
             alt="Room"
           />
         </div>
-        <form method="POST" action="room-details.php?id={{$room->id}}" class="room-availability">
+        <form method="POST" action="/room/{{$room->id}}" class="room-availability">
           <h4 class="text room__availability__text text--margin text--dark">
             Check Availability
           </h4>
@@ -235,7 +235,7 @@ Room Details
             @foreach($rooms_related as $index => $room)
               <div class="swiper-slide room__card">
                 <div class="room__card__img__container">
-                  <a href = 'room-details.php?id={{$room->id}}'><img
+                  <a href = '/room/{{$room->id}}'><img
                     class="room__card__img"
                     src='{{$room->photos[0]}}'
                     alt="Room"
@@ -313,7 +313,7 @@ Room Details
             @foreach($rooms_related as $index => $room)
               <div class="room__card">
                 <div class="room__card__img__container room__card__img__container__petit">
-                  <a href = 'room-details.php?id={{$room->id}}'><img
+                  <a href = '/room/{{$room->id}}'><img
                     class="room__card__img"
                     src='{{$room->photos[0]}}'
                     alt="Room"

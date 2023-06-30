@@ -8,7 +8,7 @@ Contact
         <h1 class="section__title__text sub-header__title text--white">New Details</h1>
         <div class="return__home__container">
             <div class="return__home__buttons">
-              <a href="./index.php"><h4 class="return__home__button"><span class="return__button__text text--dark">Home</span></h4></a>
+              <a href="/home"><h4 class="return__home__button"><span class="return__button__text text--dark">Home</span></h4></a>
                 <h4><strong>|</strong></h4>
                 <h4 class="return__home__button"><span class="return__button__text text--golden">Blog</span></h4>
             </div>
@@ -53,7 +53,7 @@ Contact
       <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.454649340065!2d-5.910605210702898!3d35.71503555741768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0b89e2f365159d%3A0xa7d8fe9905943e8b!2sH%C3%B4tel%20Miranda!5e0!3m2!1ses!2ses!4v1684133844947!5m2!1ses!2ses" style="border:0;" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
     <section class="section contact__form__section">
-        <form method="POST" action="contact.php" class="contact__form">
+        <form method="POST" class="contact__form">
             <div class="contact__form__first__column">
                 <div class="contact__input__container">
                     <img src="../Assets/Input/name-icon.png" alt="">
