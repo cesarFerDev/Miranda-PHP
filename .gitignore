@@ -7,4 +7,3 @@ vendor/
 # Private Files
 .env
 config.php
-.htaccess
